@@ -1,0 +1,5 @@
+{
+'application_type':'web',
+'redirect_uris':['LAYERS_API_URI/mobsos-qv/'],
+'client_name':'MobSOS-QV'
+}
