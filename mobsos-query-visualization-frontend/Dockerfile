@@ -19,8 +19,11 @@ RUN mv demo.html index.html
 # Provide default port if random port mapping invoked
 EXPOSE 80
 
+# Do not daemonze
+RUN echo 'daemon off;' >> /etc/nginx/nginx.conf
+
 CMD sed -i "s#\(data-server=\).*#\1\"${LAYERS_API_URI}o/oauth2\"#" index.html && \
     sed -i "s#\(data-clientid=\).*#\1\"${QVS_OIDC_CLIENT_ID}\"#" index.html && \
     sed -i "s#var LASHOST .*#var LASHOST = host || \"${LAYERS_API_URL}\";#" js/queryviz.js && \
-    sed -i "s#var QVSPATH .*#var QVSPATH = host || \"${SERVICE_API_PATH}\";#" js/queryviz.js \
+    sed -i "s#var QVSPATH .*#var QVSPATH = host || \"${SERVICE_API_PATH}\";#" js/queryviz.js && \
     nginx
