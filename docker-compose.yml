@@ -1,5 +1,5 @@
 qvs:
-    container_name: mobsos-qvs
+    container_name: qvs
     image: learninglayers/mobsos-qvs:0.0.1
     env_file:
         - common.env
@@ -13,7 +13,7 @@ qvs:
         - mysql
 
 qvsdata:
-    container_name: mobsos-qvs-data
+    container_name: qvsdata
     image: learninglayers/mobsos-qvs-data:0.0.1
     env_file:
         - common.env
@@ -27,7 +27,7 @@ qvsdata:
             - qvs.env
 
 qvsfrontend:
-    container_name: mobsos-qvs-frontend
+    container_name: qvsfrontend
     image: learninglayers/mobsos-qvs-frontend:0.0.1
     env_file:
         - common.env
