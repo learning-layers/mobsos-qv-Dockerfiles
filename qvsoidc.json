@@ -1,6 +1,6 @@
 {
 'application_type':'web',
-'redirect_uris':['LAYERS_API_URI/mobsos-qv/'],
+'redirect_uris':['LAYERS_API_URImobsos-qv/'],
 'client_name':'MobSOS-QV',
 "contacts": [
     "nicolaescu@dbis.rwth-aachen.de"
