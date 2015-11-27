@@ -1,5 +1,19 @@
 {
 'application_type':'web',
 'redirect_uris':['LAYERS_API_URI/mobsos-qv/'],
-'client_name':'MobSOS-QV'
+'client_name':'MobSOS-QV',
+"contacts": [
+    "nicolaescu@dbis.rwth-aachen.de"
+  ],
+  "tos_uri": null,
+  "token_endpoint_auth_method": "client_secret_basic",
+  "scope": "phone openid address email profile",
+  "grant_types": [
+    "implicit"
+  ],
+  "response_types": [
+    "id_token",
+    "token id_token",
+    "token"
+  ]
 }
